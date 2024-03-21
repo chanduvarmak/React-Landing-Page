@@ -1,0 +1,32 @@
+.card-container {
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 30%;
+  margin-top: 20px;
+}
+
+
+.avatar-container {
+  position: relative;
+}
+
+.hover-content {
+  position: absolute;
+  top: calc(100% + 10px); /* Position the content just below the avatar */
+  left: 50%;
+  transform: translateX(-50%); /* Center horizontally */
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s ease-in-out; /* Smooth transition for visibility and opacity */
+}
+
+.avatar-container:hover .hover-content {
+  visibility: visible;
+  opacity: 1;
+}

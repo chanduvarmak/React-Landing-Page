@@ -1,0 +1,21 @@
+.navbar{
+    /* background-image: linear-gradient(to right, red , yellow); */
+    /* background: cadetblue;     */
+    background: #dd8133;    
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    padding: 10px;
+}
+.navbar a {
+    color: #fff; /* Text color */
+    text-decoration: none; /* Remove default underline */
+    margin: 0 10px; /* Add some spacing between menu items */
+    transition: color 0.3s ease; /* Smooth color transition */
+  }
+  
+  .navbar a:hover {
+    color: black; /* Change text color on hover */
+  }
