@@ -1,7 +1,5 @@
 import React from 'react';
-import Test from '../Test';
 import { Link } from 'react-router-dom';
-import Router from '../router';
 import '../home/home.css'
 const HeroSection = () => {
 
@@ -58,10 +56,10 @@ const HeroSection = () => {
                     <div className="footer-column">
                         <h3>Quick Links</h3>
                         <ul>
-                            <li><Link to="/">Home</Link></li>
-                            <li><Link to="/about">About</Link></li>
+                            <li><Link to="/Home">Home</Link></li>
+                            <li><Link to="/Blog">About</Link></li>
                             <li><Link to="/services">Services</Link></li>
-                            <li><Link to="/contact">Contact</Link></li>
+                            <li><Link to="/ContactForm">Contact</Link></li>
                         </ul>
                     </div>
                     <div className="footer-column">
@@ -71,7 +69,7 @@ const HeroSection = () => {
                     </div>
                 </div>
                 <div className="footer-bottom">
-                    <p>&copy; 2024 Your Company. All rights reserved.</p>
+                    <p>&copy; 2024 Chandu Varma.K. All rights reserved.</p>
                 </div>
             </footer>
         </>
