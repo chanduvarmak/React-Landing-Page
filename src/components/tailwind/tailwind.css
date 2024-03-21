@@ -3,3 +3,11 @@
     align-items: center;
     justify-content: center;
 }
+.dialog-div{
+    display: flex;
+    justify-content: center;
+}
+.dialog-body{
+    width: 85vh;
+    padding: 10px;
+}

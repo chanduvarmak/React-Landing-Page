@@ -7,6 +7,7 @@ import Tailwind from "./tailwind/tailwind";
 import Navbar from "./navbar/navbar";
 import HeroSection from "./home/home";
 import Video from "./video/video";
+import Service from "./service/service";
 export default function Router() {
     return (
         <BrowserRouter>
@@ -20,6 +21,7 @@ export default function Router() {
                     <Route path="Blog" element={<Tailwind />} />
                     <Route path="Home" element={<HeroSection />} />
                     <Route path="Video" element={<Video />} />
+                    <Route path="Service" element={<Service />} />
                     <Route path="*" element={<ValidatingForm />} />
                 </Route>
             </Routes>

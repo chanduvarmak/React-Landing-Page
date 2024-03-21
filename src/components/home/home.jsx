@@ -58,7 +58,7 @@ const HeroSection = () => {
                         <ul>
                             <li><Link to="/Home">Home</Link></li>
                             <li><Link to="/Blog">About</Link></li>
-                            <li><Link to="/services">Services</Link></li>
+                            <li><Link to="/Service">Services</Link></li>
                             <li><Link to="/ContactForm">Contact</Link></li>
                         </ul>
                     </div>
