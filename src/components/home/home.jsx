@@ -1,6 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../home/home.css'
+const featuresData = [
+    { title: 'Feature 1', description: 'This is a brief description of feature' },
+    { title: 'Feature 2', description: 'This is a brief description of feature' },
+    { title: 'Feature 3', description: 'This is a brief description of feature' }
+];
+const testimonialsData = [
+    { name: 'John Doe', quote: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac odio vel est consequat tincidunt. Ut nec odio neque. Suspendisse potenti.' },
+    { name: 'Jane Doe', quote: 'Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi id velit ut tortor volutpat ultrices.' }
+];
 const HeroSection = () => {
 
     return (
@@ -19,32 +28,25 @@ const HeroSection = () => {
 
             {/* section2 */}
             <section className="features-section">
-                <div className="feature">
-                    <h2>Feature 1</h2>
-                    <p>This is a brief description of feature 1.</p>
-                </div>
-                <div className="feature">
-                    <h2>Feature 2</h2>
-                    <p>This is a brief description of feature 2.</p>
-                </div>
-                <div className="feature">
-                    <h2>Feature 3</h2>
-                    <p>This is a brief description of feature 3.</p>
-                </div>
+                {featuresData.map((feature, index) => (
+                    <div className="feature" key={index}>
+                        <h2>{feature.title}</h2>
+                        <p>{feature.description}</p>
+                    </div>
+                ))}
             </section>
 
             {/* section3 */}
             <section className="testimonials-section">
-                <div className="testimonial">
-                    <h2>Testimonial 1</h2>
-                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac odio vel est consequat tincidunt. Ut nec odio neque. Suspendisse potenti."</p>
-                    <p>- John Doe</p>
-                </div>
-                <div className="testimonial">
-                    <h2>Testimonial 2</h2>
-                    <p>"Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi id velit ut tortor volutpat ultrices."</p>
-                    <p>- Jane Doe</p>
-                </div>
+                {testimonialsData.map((testimonial, index) => (
+                    <div className="testimonial-card" key={index}>
+                        <div className="testimonial-content">
+                            <h2>{`Testimonial ${index + 1}`}</h2>
+                            <p>"{testimonial.quote}"</p>
+                            <p>- {testimonial.name}</p>
+                        </div>
+                    </div>
+                ))}
             </section>
             {/* <section><Test name="chandu" /></section> */}
             <footer className="footer">

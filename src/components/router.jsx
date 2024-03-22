@@ -13,7 +13,7 @@ export default function Router() {
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Navbar />}>
-                    {/* <Route index element={<Profile />} /> */}
+                    <Route index element={<HeroSection />} />
                     <Route path="withapi" element={<WithApi />} />
                     <Route path="Profile" element={<Profile />} />
                     <Route path="mybutton" element={<MyButton />} />
