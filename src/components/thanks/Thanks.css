@@ -1,0 +1,10 @@
+.submit-button{
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+    text-decoration: none;
+    border-radius: 5px;
+}

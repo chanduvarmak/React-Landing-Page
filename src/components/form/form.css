@@ -41,4 +41,17 @@
     color: red;
     font-size: 0.8rem;
   }
-  
+
+  .go-to-home{
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .submit-button{
+    display: flex;
+    justify-content: center;           
+  }
