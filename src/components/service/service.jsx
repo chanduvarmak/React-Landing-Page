@@ -111,14 +111,16 @@ export function Service() {
                                     onChange={(e) => setNewDetail({ ...newDetail, description: e.target.value })}
                                 />
                             </DialogContent>
-                            <DialogActions>
-                                <Button onClick={handleCloseDialog}>Cancel</Button>
-                                {editDetailId ? (
-                                    <Button onClick={handleUpdate}>Update</Button>
-                                ) : (
-                                    <Button onClick={handleAdd}>Add</Button>
-                                )}
-                            </DialogActions>
+                            <div className="action-buttons">
+                                <DialogActions>
+                                    <Button onClick={handleCloseDialog}>Cancel</Button>
+                                    {editDetailId ? (
+                                        <Button onClick={handleUpdate}>Update</Button>
+                                    ) : (
+                                        <Button onClick={handleAdd}>Add</Button>
+                                    )}
+                                </DialogActions>
+                            </div>
                         </Dialog>
                     </div>
                     <ul className="details-list">
