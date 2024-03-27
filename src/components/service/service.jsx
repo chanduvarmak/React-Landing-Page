@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import axios from 'axios';
 import '../service/service.css'
 import { Button, Dialog, DialogActions, DialogContent, DialogTitle, TextField } from '@mui/material';
+import Tooltip from '@mui/material/Tooltip';
+import { toast, ToastContainer } from 'react-toastify';
 export function Service() {
     const [details, setDetails] = useState([]);
     const [searchQuery, setSearchQuery] = useState('');
@@ -33,15 +35,20 @@ export function Service() {
     };
     const handleAdd = async () => {
         try {
+            if (!newDetail.name || !newDetail.description) {
+                toast.error('Please provide both name and description.');
+                return;
+            }
+
             await axios.post('http://localhost:5000/details', newDetail);
             fetchData();
-            setNewDetail({ name: '', description: '' }); // Reset newDetail state after adding
+            handleCloseDialog(); // Close dialog after adding
+            toast.success('Detail added successfully!');
         } catch (error) {
             console.error('Error adding detail:', error);
         }
     };
     const handleEdit = async (id) => {
-        // Find detail by id
         const detailToEdit = details.find(detail => detail.id === id);
         if (detailToEdit) {
             setNewDetail(detailToEdit);
@@ -51,18 +58,23 @@ export function Service() {
     };
     const handleUpdate = async () => {
         try {
+            console.log('Updating detail with ID:', editDetailId);
+            console.log('New detail:', newDetail);
             await axios.put(`http://localhost:5000/details/${editDetailId}`, newDetail);
             fetchData();
-            setNewDetail({ name: '', description: '' }); // Reset newDetail state after updating
-            setOpenDialog(false); // Close dialog after updating
+            handleCloseDialog(); // Close dialog after updating
+            toast.success('Detail updated successfully!');
         } catch (error) {
             console.error('Error updating detail:', error);
         }
     };
+
     const handleDelete = async (id) => {
         try {
+            console.log('Deleting detail with ID:', id);
             await axios.delete(`http://localhost:5000/details/${id}`);
             fetchData();
+            toast.success('Detail deleted successfully!');
         } catch (error) {
             console.error('Error deleting detail:', error);
         }
@@ -77,19 +89,23 @@ export function Service() {
             </section> */}
 
             <section>
+                <ToastContainer />
                 <div className="service-head flex-col">
                     <h1>Service component works!</h1>
                     <div className="search-container">
                         <input
-                            type="text"
+                            type="search"
                             placeholder="Search..."
                             value={searchQuery}
                             onChange={handleSearch}
+                            autoFocus
                         />
                         {/* <span>Total Details: {details.length}</span> */}
                     </div>
                     <div className="add-container">
-                        <Button variant="outlined" onClick={() => setOpenDialog(true)}>Add</Button>
+                        <Tooltip title="To Add click this 'ADD'" placement="right">
+                            <Button variant="outlined" onClick={() => setOpenDialog(true)} data-tip="Tooltip content">Add</Button>
+                        </Tooltip>
                         <Dialog open={openDialog} onClose={handleCloseDialog}>
                             <DialogTitle>{editDetailId ? "Edit Detail" : "Add New Detail"}</DialogTitle>
                             <DialogContent>
@@ -111,23 +127,24 @@ export function Service() {
                                     onChange={(e) => setNewDetail({ ...newDetail, description: e.target.value })}
                                 />
                             </DialogContent>
-                            <div className="action-buttons">
-                                <DialogActions>
-                                    <Button onClick={handleCloseDialog}>Cancel</Button>
-                                    {editDetailId ? (
-                                        <Button onClick={handleUpdate}>Update</Button>
-                                    ) : (
-                                        <Button onClick={handleAdd}>Add</Button>
-                                    )}
-                                </DialogActions>
-                            </div>
+
+                            <DialogActions>
+                                <Button onClick={handleCloseDialog}>Cancel</Button>
+                                {editDetailId ? (
+                                    <Button onClick={handleUpdate}>Update</Button>
+                                ) : (
+                                    <Button onClick={handleAdd}>Add</Button>
+                                )}
+                            </DialogActions>
+
                         </Dialog>
+
                     </div>
                     <ul className="details-list">
                         {filteredDetails.map(detail => (
                             <li key={detail.id}>
                                 <strong>{detail.name}</strong>: {detail.description}
-                                <div>
+                                <div className="action-buttons">
                                     <button onClick={() => handleEdit(detail.id)}>Edit</button>
                                     <button onClick={() => handleDelete(detail.id)}>Delete</button>
                                 </div>
@@ -138,6 +155,7 @@ export function Service() {
                 </div>
 
             </section>
+
         </>
     );
 };

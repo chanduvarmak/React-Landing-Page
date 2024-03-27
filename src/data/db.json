@@ -117,39 +117,34 @@
   ],
   "details": [
     {
-      "id": 1,
-      "name": "Detail 1",
-      "description": "Description 1"
-    },
-    {
-      "id": 2,
-      "name": "Detail 2",
-      "description": "Description 2"
-    },
-    {
-      "id": 3,
-      "name": "Detail 3",
-      "description": "Description 3"
-    },
-    {
-      "id": 4,
-      "name": "Detail 4",
-      "description": "Description 4"
-    },
-    {
-      "id": "60f6",
-      "name": "chandu varma",
-      "description": "sdfsfdsf"
-    },
-    {
       "id": "b9c4",
       "name": "chandu varma",
-      "description": "sdfhdsjhasdasda"
+      "description": "sdfhdsadabff"
     },
     {
       "id": "ba5d",
       "name": "Nstarx Inc",
       "description": "Saas Company"
+    },
+    {
+      "id": "b024",
+      "name": "suresh emmani",
+      "description": "Developer"
+    },
+    {
+      "id": "2166",
+      "name": "suresh emmani",
+      "description": "Developer12"
+    },
+    {
+      "id": "a879",
+      "name": "vfcbf bfvcb",
+      "description": "xfdsfdsg"
+    },
+    {
+      "id": "15e7",
+      "name": "chandu varma",
+      "description": "desc"
     }
   ]
 }

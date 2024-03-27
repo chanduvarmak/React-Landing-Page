@@ -26,7 +26,7 @@ const Tailwind = () => {
         <Dialog open={open} onClose={handleClose}>
           <div className="dialog-body">
             <h2>Tail Title</h2>
-            <p>This is the content of the dialog.</p>
+            <p>This is the content of the blog!comes to you soon...!</p>
             <Button onClick={handleClose}>Close</Button>
           </div>
         </Dialog>
