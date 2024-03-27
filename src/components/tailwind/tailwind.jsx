@@ -3,9 +3,7 @@ import react, { useState } from 'react';
 import Dialog from '@mui/material/Dialog';
 import Button from '@mui/material/Button';
 const Tailwind = () => {
-  // const DialogBox = () => {
   const [open, setOpen] = useState(false);
-  // const [handleClickOpen,handleClose]= useState(false);
   const handleClickOpen = () => {
     setOpen(true);
   };
@@ -13,7 +11,7 @@ const Tailwind = () => {
   const handleClose = () => {
     setOpen(false);
   };
-  // }
+
   return (
     <>
       <div className="tail-head">
