@@ -129,14 +129,9 @@
   ],
   "details": [
     {
-      "id": "ba5d",
-      "name": "Nstarx Inc",
-      "description": "Saas Company"
-    },
-    {
       "id": "b024",
-      "name": "suresh emmani",
-      "description": "Developer"
+      "name": "suresh emmanii",
+      "description": "Frontend Developer"
     },
     {
       "id": "2166",
@@ -159,7 +154,7 @@
       "description": "Frontend Developer"
     }
   ],
-  "blogs":[
+  "blogs": [
     {
       "id": 1,
       "title": "10 Tips for React Beginners",
@@ -191,6 +186,26 @@
       "date": "March 15, 2024",
       "author": "Jane Smith",
       "url": "https://example.com/blog4"
+    }
+  ],
+  "events": [
+    {
+      "id": 1,
+      "title": "Birthday Party",
+      "date": "2024-04-10",
+      "description": "John's birthday party at 7:00 PM"
+    },
+    {
+      "id": 2,
+      "title": "Meeting",
+      "date": "2024-04-15",
+      "description": "Monthly team meeting at 10:00 AM"
+    },
+    {
+      "id": 3,
+      "title": "Conference",
+      "date": "2024-04-20",
+      "description": "Tech conference at 9:00 AM"
     }
   ]
 }

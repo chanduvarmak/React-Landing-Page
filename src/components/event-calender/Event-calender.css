@@ -1,0 +1,51 @@
+/* Base styles */
+.event-calendar {
+    padding: 20px;
+    overflow-x: auto;
+}
+
+.event-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0 -10px; /* Add negative margin to compensate for padding */
+}
+
+.event {
+    flex: 0 0 calc(33.333% - 20px);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.event:hover {
+    transform: translateY(-5px); /* Lift the card on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.event-title {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.event-description {
+    color: #666;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+    .event {
+        flex: 0 0 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .event {
+        flex: 0 0 calc(100% - 20px);
+    }
+}

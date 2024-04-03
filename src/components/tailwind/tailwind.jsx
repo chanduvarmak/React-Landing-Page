@@ -3,9 +3,11 @@ import react, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Dialog from '@mui/material/Dialog';
 import Button from '@mui/material/Button';
+import EventCalendar from '../event-calender/Event-calender';
 const Tailwind = () => {
   const [blogs, setBlogs] = useState([]);
   const [open, setOpen] = useState(false);
+  const [events, setEvents] = useState([]);
   const handleClickOpen = () => {
     setOpen(true);
   };
@@ -13,7 +15,6 @@ const Tailwind = () => {
     setOpen(false);
   };
   useEffect(() => {
-    // Replace 'YOUR_BACKEND_API_URL' with your actual backend API URL
     fetch('http://localhost:5000/blogs')
       .then(response => response.json())
       .then(data => setBlogs(data))
@@ -55,6 +56,8 @@ const Tailwind = () => {
           ))}
         </div>
       </div>
+
+      <EventCalendar />
     </>
   );
 }
