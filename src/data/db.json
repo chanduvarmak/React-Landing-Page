@@ -125,14 +125,15 @@
       "name": "suresh emmani",
       "email": "suresh123@gmail.com",
       "message": "this message is on behalf of company requirement.\n"
+    },
+    {
+      "id": "a6d4",
+      "name": "vfcbf bfvcb",
+      "email": "example@example.com",
+      "message": "message is empty\n"
     }
   ],
   "details": [
-    {
-      "id": "b024",
-      "name": "suresh emmanii",
-      "description": "Frontend Developer"
-    },
     {
       "id": "2166",
       "name": "suresh emmani",
@@ -206,6 +207,48 @@
       "title": "Conference",
       "date": "2024-04-20",
       "description": "Tech conference at 9:00 AM"
+    }
+  ],
+  "slides": [
+    {
+      "player": {
+        "title": "Efren Reyes",
+        "desc": "Known as 'The Magician', Efren Reyes is well regarded by many professionals as the greatest all around player of all time.",
+        "image": "https://i.postimg.cc/RhYnBf5m/er-slider.jpg"
+      },
+      "id": "424e"
+    },
+    {
+      "player": {
+        "title": "Ronnie O'Sullivan",
+        "desc": "Ronald Antonio O'Sullivan is a six-time world champion and is the most successful player in the history of snooker.",
+        "image": "https://i.postimg.cc/qBGQNc37/ro-slider.jpg"
+      },
+      "id": "6585"
+    },
+    {
+      "player": {
+        "title": "Shane Van Boening",
+        "desc": "The 'South Dakota Kid' is hearing-impaired and uses a hearing aid, but it has not limited his ability.",
+        "image": "https://i.postimg.cc/cHdMJQKG/svb-slider.jpg"
+      },
+      "id": "276b"
+    },
+    {
+      "player": {
+        "title": "Mike Sigel",
+        "desc": "Mike Sigel or 'Captain Hook' as many like to call him is an American professional pool player with over 108 tournament wins.",
+        "image": "https://i.postimg.cc/C12h7nZn/ms-1.jpg"
+      },
+      "id": "7133"
+    },
+    {
+      "player": {
+        "title": "Willie Mosconi",
+        "desc": "Nicknamed 'Mr. Pocket Billiards,' Willie Mosconi was among the first Billiard Congress of America Hall of Fame inductees.",
+        "image": "https://i.postimg.cc/NfzMDVHP/willie-mosconi-slider.jpg"
+      },
+      "id": "e653"
     }
   ]
 }
